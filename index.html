@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lion King ASCII Mystery Box</title>
+  <style>
+    body { background:black; color:white; font-family: monospace; white-space: pre; padding:20px; }
+    #ascii { font-size:16px; }
+    button { margin-top:20px; padding:10px 20px; font-size:16px; }
+  </style>
+</head>
+<body>
+<h1>Lion King Xmas Mystery Box</h1>
+<div id="ascii"></div>
+<button onclick="nextArt()">Open Next</button>
+
+<script>
+const artworks = [
+`      .-"'"-.
+     /        \\
+    |  O  O   |
+    |   ∆     |
+     \\  --   /
+      ` + "`-..-'" + `
+   Simba, the future king`,
+
+`      /\\_/\\  
+     ( o o )  < "King of Pride Rock"
+     (  ^  )  
+      || ||`,
+
+`     /\\_/\\   
+    ( o_O )  < "The shadow looms"
+    > ^ <`,
+
+`    (\\_._/)   (\\_._/) 
+    ( o o )   ( o o ) < "Wisdom meets future king"
+    > ^ <     > ^ <`,
+
+`   (\\_/)   (\\_._/) 
+   (o_o)   (O O) < "Hakuna Matata!"
+   ( > )   ( v ) `,
+
+`       /\\
+      /  \\
+     / || \\
+    /  ||  \\
+   /___||___\\  < "Kingdom of wealth"`,
+
+`      🌞
+     /   \\
+    /     \\
+   (  👶  )   < "New beginnings"
+    \\     /
+     \\   /
+      🌍`,
+
+` (\\_._/)(\\_._/)
+ (o_o )(O_O )  < "Chaos approaches"
+  > ^  < > ^ <`,
+
+`   /\\   /\\
+  (  o_o  )
+   (  ^  )   < "Steps of a king"`,
+
+`      /\\_/\\  
+     ( O O )  < "The billionaire king"
+     (  ∆  )
+      || ||`];
+
+let current = 0;
+const elem = document.getElementById("ascii");
+elem.textContent = artworks[current];
+
+function nextArt() {
+  current = (current + 1) % artworks.length;
+  elem.textContent = artworks[current];
+}
+</script>
+</body>
+</html>
+     
